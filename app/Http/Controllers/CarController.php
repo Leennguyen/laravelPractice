@@ -66,7 +66,12 @@ class CarController extends Controller
         $car->save();
 
         return redirect()->route('cars.index')->with('alert', 'Bạn đã thêm thành công');
-    
+        // if ($car){
+        //     return response()->json(["status"=>$this->status, "success"=> true,"message"]);
+        // }
+        // else {
+        //     return response() ->json(["status" =>"failed", "success"=>false, "message"]);
+        // }
     }
 
     /**
