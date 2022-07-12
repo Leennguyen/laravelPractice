@@ -18,7 +18,7 @@ class ProducerFactory extends Factory
     {
         return [
             //
-            'producer_name' => $this->faker->name(),
+            'pro_name' => $this->faker->name(),
         ];
     }
 

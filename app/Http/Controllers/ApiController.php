@@ -70,13 +70,14 @@ class ApiController extends Controller
         try {
 
             $car = Car::find($car);
-            if ($request->hasFile("image")) {
+            if ($request->hasFile("img")) {
                 $img = $request->file("img");
                 $imageName = time() . '_' . $img->getClientOriginalName();
                 $img->move(public_path("images"), $imageName);
                 // remove old image
-                if (file_exists("/images/" . $car->image)) {
-                    unlink("/images/" . $car->image);
+                if (file_exists("/images/" . $car->img)) {
+                    unlink("/images/" . $car->img);
+                    
                 }
                 $car->img = $imageName;
             }
@@ -85,7 +86,7 @@ class ApiController extends Controller
             $car->save();
 
             return response()->json([
-                'message' => 'car Updated Successfully!!'
+                'message' => 'Car Updated Successfully!!'
             ]);
         } catch (\Exception $e) {
             // \Log::error($e->getMessage());

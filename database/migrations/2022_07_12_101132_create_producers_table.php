@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('producers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('producer_name');
+            $table->string('pro_name');
             $table->timestamps();
         });
     }

@@ -18,10 +18,9 @@ return new class extends Migration
             $table->string('name_car');
             $table->float('price');
             $table->string('img');
-            //$table->unsignedInteger('producer_id');
-            //$table->foreign('producer_id')->references('id')->on('producers')->onUpdate('cascade')->onDelete('cascade');
+            $table->unsignedInteger('producer_id');
+            $table->foreign('producer_id')->references('id')->on('producers')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
-            
         });
     }
 

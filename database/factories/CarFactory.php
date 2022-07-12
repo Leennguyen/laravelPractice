@@ -19,7 +19,7 @@ class CarFactory extends Factory
         return  [
             'name_car' => $this->faker->name(),
             'price' => rand(10, 1000),   
-            //'producer_id'=>rand(1,10),
+            'producer_id'=>rand(1,10),
             'img' =>'',
             // 'updated_at'=>now(),
             // 'created_at' => now()
