@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
-use Illuminate\Http\Request;
-use App\Http\Controllers\PhuongtrinhController;
-use App\Http\Controllers\PheptinhController;
+// use Illuminate\Http\Request;
+// use App\Http\Controllers\PhuongtrinhController;
+// use App\Http\Controllers\PheptinhController;
+use App\Http\Controllers\BakeryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,5 +61,5 @@ Route::get('/car-list',[CarController::class,'index']);
 
 
 Route::resource('cars',CarController::class);
-Route::get('/homepage', [CarController::class, 'showHomepage']);
-Route::get('/detail',[CarController::class, 'showDetail']);
+Route::get('/homepage', [BakeryController::class, 'showHomepage']);
+Route::get('/detail',[BakeryController::class, 'showDetail']);
