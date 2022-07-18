@@ -136,4 +136,11 @@ class CarController extends Controller
         $car->delete();
         return redirect()->route('cars.index')->with('alert', 'Xóa thành công !!');;
     }
+    public function showHomepage(){
+        return view('pages.homePage');
+        
+    }
+    public function showDetail(){
+        return view('pages.detail');
+    }
 }

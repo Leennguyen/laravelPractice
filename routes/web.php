@@ -60,3 +60,5 @@ Route::get('/car-list',[CarController::class,'index']);
 
 
 Route::resource('cars',CarController::class);
+Route::get('/homepage', [CarController::class, 'showHomepage']);
+Route::get('/detail',[CarController::class, 'showDetail']);
